@@ -2,28 +2,29 @@ import tkinter as tk
 from tkinter import messagebox
 
 class ToDoApp:
-    def __init__(self, root):  # Corrected: __init__ instead of _init_
+    def __init__(self, root):
         self.root = root
         self.root.title("To-Do List Application")
-        self.root.geometry("400x400")
+        self.root.geometry("450x500")
+        self.root.config(bg="#f0f0f0")
 
         # Task list
         self.tasks = []
 
         # Creating UI components
-        self.task_label = tk.Label(root, text="Enter your task:")
+        self.task_label = tk.Label(root, text="Enter your task:", font=("Arial", 14), bg="#f0f0f0")
         self.task_label.pack(pady=10)
 
-        self.task_entry = tk.Entry(root, width=30)
-        self.task_entry.pack(pady=10)
+        self.task_entry = tk.Entry(root, width=35, font=("Arial", 12))
+        self.task_entry.pack(pady=10, ipady=5)
 
-        self.add_task_button = tk.Button(root, text="Add Task", command=self.add_task)
+        self.add_task_button = tk.Button(root, text="Add Task", command=self.add_task, font=("Arial", 12), bg="#4CAF50", fg="white", padx=10, pady=5)
         self.add_task_button.pack(pady=10)
 
-        self.task_listbox = tk.Listbox(root, height=10, width=40, selectmode=tk.SINGLE)
+        self.task_listbox = tk.Listbox(root, height=15, width=40, font=("Arial", 12), selectmode=tk.SINGLE, bg="#ffffff", activestyle="dotbox")
         self.task_listbox.pack(pady=20)
 
-        self.delete_task_button = tk.Button(root, text="Delete Task", command=self.delete_task)
+        self.delete_task_button = tk.Button(root, text="Delete Task", command=self.delete_task, font=("Arial", 12), bg="#f44336", fg="white", padx=10, pady=5)
         self.delete_task_button.pack(pady=10)
 
     def add_task(self):
@@ -48,7 +49,8 @@ class ToDoApp:
         for task in self.tasks:
             self.task_listbox.insert(tk.END, task)
 
-if __name__ == "__main__":  # Corrected: __main__ instead of _main_
+if __name__ == "__main__":
     root = tk.Tk()
     app = ToDoApp(root)
     root.mainloop()
+
