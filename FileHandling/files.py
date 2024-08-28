@@ -1,6 +1,6 @@
-#opening and reading a file
 import os.path
 
+#opening and reading a file
 """file = open("file.txt" , "r")
 for line in file:
     print(file.readlines())
