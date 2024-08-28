@@ -1,7 +1,7 @@
 #This is a program that checks the strength of a password
 import string
 
-password = input("Enter your password please: ")
+password1 = input("Enter your password please: ")
 
 def check_password_strength(password):
     common_password = ["abcdef" , "123456789","0000000","password","qwertyuiop"]
@@ -18,3 +18,19 @@ def check_password_strength(password):
     has_lower = any(char.islower() for char in password)
     has_digit = any(char.isdigit() for char in password)
     has_special = any(char in string.punctuation for char in password)
+
+    if not has_upper:
+        return "Weak! :Password must contain at least 1 uppercase character.."
+    if not has_lower:
+        return "Weak! :Password must contain at least 1 lowercase character.."
+    if not has_digit:
+        return "Weak! :Password must contain at least 1 digit.."
+    if not has_special:
+        return "Weak! :Password must contain at least 1 special character[!,@,#,$,%,&,*,^]"
+
+    if len(password) >= 10 and has_upper and has_lower and has_digit and has_special:
+        return "Strong!"
+    else:
+        return "Moderate!"
+
+check_password_strength(password1)
