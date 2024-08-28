@@ -35,5 +35,3 @@ def check_password_strength(password):
 
 strength = check_password_strength(password1)
 print(strength)
-
-
