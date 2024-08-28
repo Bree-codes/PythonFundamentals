@@ -1,21 +1,21 @@
 import os.path
 
 #opening and reading a file
-"""file = open("file.txt" , "r")
+file = open("file.txt" , "r")
 for line in file:
     print(file.readlines())
-file.close()"""
+file.close()
 
 #writing to a file and creating the file if it does not exist
-"""file = open("newfile.txt","w")
+file = open("newfile.txt","w")
 file.write("Hello breshy!")
 file.close()
-print("File created successfuly..")"""
+print("File created successfully.")
 
 #reading each line in the file
-"""file = open("newfile.txt" , "r")
+file = open("newfile.txt" , "r")
 print(file.readlines())
-file.close()"""
+file.close()
 
 #deleting a file by specifying its path
 if os.path.exists("newfile.txt"):
