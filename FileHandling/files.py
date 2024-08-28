@@ -17,7 +17,9 @@ print("File created successfuly..")"""
 print(file.readlines())
 file.close()"""
 
+#deleting a file by specifying its path
 if os.path.exists("newfile.txt"):
     os.remove("newfile.txt")
+    print("File deleted successfully.")
 else:
     print("File does not exist!")
