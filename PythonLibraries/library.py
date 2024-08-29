@@ -1,6 +1,6 @@
 import math
 
-"""#Squareroot
+#Squareroot
 print (math.sqrt(16))
 
 #power
@@ -26,15 +26,15 @@ print(f"tan(45°): {tan_val}")
 
 #log base 2
 print(math.log(10,2))
-print(math.log10(100))"""
+print(math.log10(100))
 
-"""#area of a circle
+#area of a circle
 r = int(input("Enter the radius: "))
 area = math.pi * pow(r,2)
 print(area)
 print(f"The area rounded down is: {math.floor(area)}")
 print(f"The area rounded up is: {math.ceil(area)}")
-print(f"The area rounded to three decimal places is: {round(area,3)}")"""
+print(f"The area rounded to three decimal places is: {round(area,3)}")
 
 #finding min and max from given numbers
 list1 = [10,3,6,88,1234,0.8,3455.99]
