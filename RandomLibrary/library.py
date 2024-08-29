@@ -2,6 +2,7 @@ import random
 
 #returns random float between 0.0 and 1.0
 print(random.random())
+print(int(random.uniform(10,20)))
 
 #random int between a and b
 print(random.randint(10,20))
@@ -15,4 +16,5 @@ print(random.choice(list1))
 random.shuffle(list1)
 print(f"The shuffled list is: {list1}")
 
-
+val = random.gauss(10,100)
+print(int(val))
