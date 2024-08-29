@@ -1,6 +1,7 @@
 import math
+from math import floor
 
-#Squareroot
+"""#Squareroot
 print (math.sqrt(16))
 
 #power
@@ -26,5 +27,12 @@ print(f"tan(45°): {tan_val}")
 
 #log base 2
 print(math.log(10,2))
-print(math.log10(100))
+print(math.log10(100))"""
 
+#area of a circle
+r = int(input("Enter the radius: "))
+area = math.pi * pow(r,2)
+print(area)
+print(math.floor(area))
+print(math.ceil(area))
+print(round(area,3))
